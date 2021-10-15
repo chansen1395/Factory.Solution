@@ -13,6 +13,7 @@ namespace Factory.Models
     public int MachineId { get; set; }
     public string Name { get; set; }
     public int SerialNumber { get; set; }
+    public bool Operational { get; set; }
     public virtual ICollection<EngineerMachine> JoinEntities { get; set; }
     // public virtual ICollection<MachineDepartment> JoinEntities2 { get; }
   }

@@ -27,14 +27,14 @@ else
     {
       @Html.Hidden("joinId", @join.EngineerMachineId)
       <input type="submit" value="Delete"/>
-      if (@Model.RepairMade == null)
+      @* if (@Model.RepairMade == 0)
       {
         <h3>@Model.Name has not made any repairs yet!</h3>
       }
-      else
-      {
+      else *@
+      @* { *@
         <p>Last Repaired a machine on: @Model.RepairMade.ToString("d")</p>
-      }
+      @* } *@
     }
   }
   </ul>
@@ -51,8 +51,9 @@ else
   }
   </ul> *@
 }
-
-<p>@Html.ActionLink("Add a Machine", "AddMachine", new { id = Model.EngineerId })</p>
-<p>@Html.ActionLink("Edit Engineer", "Edit", new { id = Model.EngineerId })</p>
-<p>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId })</p>
-<p>@Html.ActionLink("Back to Engineers", "Index")</p>
+<div id="footer">
+<button>@Html.ActionLink("Add a Machine", "AddMachine", new { id = Model.EngineerId })</button>
+<button>@Html.ActionLink("Edit Engineer", "Edit", new { id = Model.EngineerId })</button>
+<button>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId })</button>
+<button>@Html.ActionLink("Back to Engineers", "Index")</button>
+</div>

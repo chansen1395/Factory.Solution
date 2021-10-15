@@ -18,6 +18,10 @@
         <br>
         @Html.TextBoxFor(model => model.SerialNumber)
         <br>
+        @Html.LabelFor(model => model.Operational)
+        <br>
+        @Html.EditorFor(model => model.Operational)
+        <br>
         @* @Html.Label("Select Department")
         <br>
         @Html.DropDownList("DepartmentId")
@@ -26,6 +30,8 @@
       }
     </div>
   </div>
-
 </div>
-<p>@Html.ActionLink("Show all machines", "Index")</p>
+
+<div id="footer">
+<button>@Html.ActionLink("Show all machines", "Index")</button>
+</div>

@@ -98,5 +98,21 @@ namespace Factory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
+    public ActionResult Repair(int machineId)
+    {
+      Machine thisMachine = _db.Machines.FirstOrDefault(machine => machine.MachineId == machineId);
+      if (thisMachine.Operational)
+      {
+        thisMachine.Operational = false;
+      }
+      else
+      {
+        thisMachine.Operational = true;
+      }
+      _db.Entry(thisMachine).State = EntityState.Modified;
+      _db.SaveChanges();
+      return View("Details", thisMachine);
+    }
   }
 }
