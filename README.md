@@ -46,12 +46,12 @@ _This is an MVC web application to manage a factory's engineers and the machines
   - $ dotnet ef database update
 
 
-- _In order to set up the project environment:_
-  - _In bash at a folder of your choice, type the following:_
-    1. $ git clone https://github.com/chansen1395/Factory.Solution.git
-    2. $  code .
-    3. cd YourFolder.Solution/Factory
-    4. Install packages if not already installed:
+- _In order to set up the project environment, in bash at a
+ folder of your choice, type the following:_
+    1. **$ git clone https://github.com/chansen1395/Factory.Solution.git**
+    2. **$ code .**
+    3. **$ cd YourFolder.Solution/Factory**
+    4. **Install packages if not already installed:**
     ```
       $ dotnet add package Microsoft.EntityFrameworkCore -v 5.0.0
       $ dotnet add package Pomelo.EntityFrameworkCore.MySql -v 5.0.0-alpha.2
@@ -59,12 +59,13 @@ _This is an MVC web application to manage a factory's engineers and the machines
       $ dotnet add package Microsoft.EntityFrameworkCore.Design -v 5.0.0
       $ dotnet tool install --global dotnet-ef
     ```
-    5. Build out your database Migrations with the following:
+    5. **Build out your database Migrations with the following:**
     ```
       $ dotnet ef migrations add Initial
       $ dotnet ef database update
     ```
-    6. $ dotnet restore
+    6. **$ dotnet restore**<br>
+
 - _In order to run the program, follow along with the previous steps. After step 4, navigate to the Factory directory:_
 ```
     1. $ cd ..Factory
