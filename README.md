@@ -53,22 +53,24 @@ _This is an MVC web application to manage a factory's engineers and the machines
     3. cd YourFolder.Solution/Factory
     4. Install packages if not already installed:
     ```
-      i. $ dotnet add package Microsoft.EntityFrameworkCore -v 5.0.0
-      ii. $ dotnet add package Pomelo.EntityFrameworkCore.MySql -v 5.0.0-alpha.2
-      iii. $ dotnet add package Microsoft.EntityFrameworkCore.Proxies -v 5.0.0
-      iv. $ dotnet add package Microsoft.EntityFrameworkCore.Design -v 5.0.0
-      v. $ dotnet tool install --global dotnet-ef
+      $ dotnet add package Microsoft.EntityFrameworkCore -v 5.0.0
+      $ dotnet add package Pomelo.EntityFrameworkCore.MySql -v 5.0.0-alpha.2
+      $ dotnet add package Microsoft.EntityFrameworkCore.Proxies -v 5.0.0
+      $ dotnet add package Microsoft.EntityFrameworkCore.Design -v 5.0.0
+      $ dotnet tool install --global dotnet-ef
     ```
     5. Build out your database Migrations with the following:
     ```
-      i. $ dotnet ef migrations add Initial
-      ii. $ dotnet ef database update
+      $ dotnet ef migrations add Initial
+      $ dotnet ef database update
     ```
     6. $ dotnet restore
 - _In order to run the program, follow along with the previous steps. After step 4, navigate to the Factory directory:_
+```
     1. $ cd ..Factory
     2. $ dotnet watch run
     3. _Navigate to http://localhost:5000/ in your browser.
+```
 
 ## Known Bugs
 
