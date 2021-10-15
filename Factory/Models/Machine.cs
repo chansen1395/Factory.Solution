@@ -7,7 +7,7 @@ namespace Factory.Models
     public Machine()
     {
       this.JoinEntities = new HashSet<EngineerMachine>();
-      this.JoinEntities2 = new HashSet<MachineDepartment>();
+      // this.JoinEntities2 = new HashSet<MachineDepartment>();
     }
 
     public int MachineId { get; set; }
