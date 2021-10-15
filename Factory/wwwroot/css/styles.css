@@ -3,3 +3,10 @@
     font-size: 13px;
     color:white;
 }
+
+.button-footer
+{
+    height:100px;
+    width:250px;
+    font-size:20px;
+}

@@ -4,7 +4,10 @@
 
 @model Factory.Models.Machine
 
+<div class="jumbotron">
 <h4>Add a new machine</h4>
+</div>
+
 <div class="row">
   <div class="col-md-4">
     <div class="card">
@@ -22,10 +25,7 @@
         <br>
         @Html.EditorFor(model => model.Operational)
         <br>
-        @* @Html.Label("Select Department")
-        <br>
-        @Html.DropDownList("DepartmentId")
-        <br> *@
+
         <input type="submit" value="Add new machine" />
       }
     </div>
@@ -33,5 +33,5 @@
 </div>
 
 <div id="footer">
-<button>@Html.ActionLink("Show all machines", "Index")</button>
+<button style="height:100px; width:250px; font-size:20px;">@Html.ActionLink("Show all machines", "Index")</button>
 </div>

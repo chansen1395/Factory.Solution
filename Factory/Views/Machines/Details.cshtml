@@ -4,8 +4,10 @@
 @using Factory.Models;
 @model Factory.Models.Machine;
 
+<div class="jumbotron">
 <h2>Machine Details</h2>
-<hr />
+</div>
+
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 <h3>@Html.DisplayNameFor(model => model.SerialNumber): @Html.DisplayFor(model => model.SerialNumber)</h3>
 
@@ -13,7 +15,6 @@
 {
   <p>This machine is not assigned to any engineers.</p>
   <p>Assign an engineer to view machine status.</p>
-
 }
 else
 {
@@ -50,8 +51,8 @@ else
 }
 
 <div id="footer">
-<button>@Html.ActionLink("Add an engineer", "AddEngineer", new { id = Model.MachineId })</button>
-<button>@Html.ActionLink("Edit Machine", "Edit", new { id = Model.MachineId })</button>
-<button>@Html.ActionLink("Delete Machine", "Delete", new { id = Model.MachineId })</button>
-<button>@Html.ActionLink("Back to machines", "Index")</button>
+<button style="height:100px; width:250px; font-size:20px;">@Html.ActionLink("Back to machines", "Index")</button>
+<button style="height:100px; width:250px; font-size:20px;">@Html.ActionLink("Add an engineer", "AddEngineer", new { id = Model.MachineId })</button>
+<button style="height:100px; width:250px; font-size:20px;">@Html.ActionLink("Edit Machine", "Edit", new { id = Model.MachineId })</button>
+<button style="height:100px; width:250px; font-size:20px;">@Html.ActionLink("Delete Machine", "Delete", new { id = Model.MachineId })</button>
 </div>

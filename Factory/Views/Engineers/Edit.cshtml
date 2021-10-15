@@ -4,7 +4,9 @@
 
 @model Factory.Models.Engineer
 
+<div class="jumbotron">
 <h2>Edit</h2>
+</div>
 
 <h4>Edit this engineer: @Html.DisplayFor(model => model.Name)</h4>
 
@@ -21,12 +23,10 @@
   @Html.Label("Select machine")
   @Html.DropDownList("MachineId")
   <br>
-  @* @Html.Label("Select department")
-  @Html.DropDownList("DepartmentId")
-  <br> *@
+
   <input type="submit" value="Save" />
 }
 <hr>
 <div id="footer">
-<button>@Html.ActionLink("Back to Engineers", "Index")</button>
+<button style="height:100px; width:250px; font-size:20px;">@Html.ActionLink("Back to Engineers", "Index")</button>
 </div>

@@ -109,14 +109,5 @@ namespace Factory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-
-    // [HttpPost]
-    // public ActionResult DeleteDepartment(int joinId)
-    // {
-    //   var joinEntry = _db.DepartmentEngineer.FirstOrDefault(entry => entry.DepartmentEngineerId == joinId);
-    //   _db.DepartmentEngineer.Remove(joinEntry);
-    //   _db.SaveChanges();
-    //   return RedirectToAction("Index");
-    // }
   }
 }

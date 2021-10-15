@@ -4,7 +4,9 @@
 
 @model Factory.Models.Machine
 
+<div class="jumbotron">
 <h2>Add an engineer</h2>
+</div>
 
 <h4>Add an engineer for this machine: @Html.DisplayFor(model => model.Name)</h4>
 
@@ -18,5 +20,5 @@
   <input type="submit" value="Save" />
 }
 <div id="footer">
-<button>@Html.ActionLink("Back to list", "Index")</button>
+<button style="height:100px; width:250px; font-size:20px;">@Html.ActionLink("Back to list", "Index")</button>
 </div>

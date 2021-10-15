@@ -4,7 +4,10 @@
 
 @model Factory.Models.Engineer
 
+<div class="jumbotron">
 <h4>Add a new Engineer</h4>
+</div>
+
 <div class="row">
   <div class="col-md-4">
     <div class="card">
@@ -22,15 +25,11 @@
         <br>
         @Html.DropDownList("MachineId")
         <br>
-        @* @Html.Label("Select Major")
-        <br>
-        @Html.DropDownList("DepartmentId")
-        <br> *@
         <input type="submit" value="Add new engineer" />
       }
     </div>
   </div>
 </div>
 <div id="footer">
-<button>@Html.ActionLink("Show all engineers", "Index")</button>
+<button style="height:100px; width:250px; font-size:20px;">@Html.ActionLink("Show all engineers", "Index")</button>
 </div>

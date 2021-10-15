@@ -99,6 +99,7 @@ namespace Factory.Controllers
       return RedirectToAction("Index");
     }
 
+    // Updates 'Operational' bool and returns the same view
     public ActionResult Repair(int machineId)
     {
       Machine thisMachine = _db.Machines.FirstOrDefault(machine => machine.MachineId == machineId);

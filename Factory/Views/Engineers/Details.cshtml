@@ -6,11 +6,11 @@
 
 @model Factory.Models.Engineer
 
+<div class="jumbotron">
 <h2>Engineer Details</h2>
-<hr />
+</div>
+
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-@* <h3>@Html.DisplayNameFor(model => model.EnrollmentDate): @Model.EnrollmentDate.ToString("d") *@
-</h3>
 
 @if(@Model.JoinEntities.Count == 0)
 {
@@ -27,33 +27,16 @@ else
     {
       @Html.Hidden("joinId", @join.EngineerMachineId)
       <input type="submit" value="Delete"/>
-      @* if (@Model.RepairMade == 0)
-      {
-        <h3>@Model.Name has not made any repairs yet!</h3>
-      }
-      else *@
-      @* { *@
-        <p>Last Repaired a machine on: @Model.RepairMade.ToString("d")</p>
-      @* } *@
     }
   }
+  <br>
+  <p>Last Repaired a machine on: @Model.RepairMade.ToString("d")</p>
   </ul>
-  @* <h4>Engineer's Major:</h4>
-  <ul>
-  @foreach(var join in Model.JoinEntities2)
-  {
-    <li>@join.Department.Name</li>
-    @using (Html.BeginForm("DeleteDepartment", "Engineers"))
-    {
-      @Html.Hidden("joinId", @join.DepartmentEngineerId)
-      <input type="submit" value="Delete"/>
-    }
-  }
-  </ul> *@
 }
+
 <div id="footer">
-<button>@Html.ActionLink("Add a Machine", "AddMachine", new { id = Model.EngineerId })</button>
-<button>@Html.ActionLink("Edit Engineer", "Edit", new { id = Model.EngineerId })</button>
-<button>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId })</button>
-<button>@Html.ActionLink("Back to Engineers", "Index")</button>
+<button style="height:100px; width:250px; font-size:20px;">@Html.ActionLink("Back to Engineers", "Index")</button>
+<button style="height:100px; width:250px; font-size:20px;">@Html.ActionLink("Add a Machine", "AddMachine", new { id = Model.EngineerId })</button>
+<button style="height:100px; width:250px; font-size:20px;">@Html.ActionLink("Edit Engineer/Log a Repair", "Edit", new { id = Model.EngineerId })</button>
+<button style="height:100px; width:250px; font-size:20px;">@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId })</button>
 </div>
