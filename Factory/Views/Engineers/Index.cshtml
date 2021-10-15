@@ -18,15 +18,6 @@
   }
 </ul>
 
-@* <p>@Html.ActionLink("Add new engineer", "Create")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p> *@
-@using(@Html.BeginForm("Create", "Engineers"))
-{
-  <input type="submit" value="New Engineer" class="btn btn-primary">
-}
+<p>@Html.ActionLink("Add new engineer", "Create")</p>
 <br>
-@using(@Html.BeginForm("Index", "Engineers"))
-{
-  <input type="submit" value="Back to Engineers" class="btn btn-primary">
-}
-<br>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

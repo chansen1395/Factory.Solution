@@ -45,23 +45,6 @@ else
 }
 
 <p>@Html.ActionLink("Add a Machine", "AddMachine", new { id = Model.EngineerId })</p>
-
-<p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Back to Engineers", "Index")</p>
 <p>@Html.ActionLink("Edit Engineer", "Edit", new { id = Model.EngineerId })</p>
 <p>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId })</p>
-
-@using(@Html.BeginForm("Index", "Engineers"))
-{
-  <input type="submit" value="Back to Engineers" class="btn btn-primary">
-}
-<br>
-@using(@Html.BeginForm("Edit", "Engineers"))
-{
-  <input type="submit" value="Edit Engineer" class="btn btn-primary">
-}
-<br>
-@using(@Html.BeginForm("Delete", "Engineers"))
-{
-  <input type="submit" value="Delete Engineer" class="btn btn-primary">
-}
-<br>

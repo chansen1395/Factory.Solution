@@ -2,21 +2,21 @@
   Layout = "_Layout";
 }
 
-@using ClownCollege.Models;
+@using Factory.Models;
 
-<h1>Courses</h1>
+<h1>Machines</h1>
 
 @if (@Model.Count == 0)
 {
-  <h3>No courses have been added yet!</h3>
+  <h3>No machines have been added yet!</h3>
 } 
 
 <ul>
-  @foreach(Course course in Model)
+  @foreach(Machine machine in Model)
   {
-    <li>@Html.ActionLink($"{course.Name}", "Details", new { id = course.CourseId })</li>
+    <li>@Html.ActionLink($"{machine.Name}", "Details", new { id = machine.MachineId })</li>
   }
 </ul>
 
-<p>@Html.ActionLink("Add new course", "Create")</p>
+<p>@Html.ActionLink("Add new machine", "Create")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
