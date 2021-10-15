@@ -12,3 +12,8 @@
   <input type="submit" value="Delete" />
 }
 @Html.ActionLink("Back to List", "Index")
+@using(@Html.BeginForm("Index", "Engineers"))
+{
+  <input type="submit" value="Back to Engineers" class="btn btn-primary">
+}
+<br>

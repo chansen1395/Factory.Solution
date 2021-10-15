@@ -19,3 +19,8 @@
 }
 
 <p>@Html.ActionLink("Back to list", "Index")</p>
+@using(@Html.BeginForm("Index", "Engineers"))
+{
+  <input type="submit" value="Back to list" class="btn btn-primary">
+}
+<br>
