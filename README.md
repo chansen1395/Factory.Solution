@@ -67,6 +67,7 @@ _This is an MVC web application to manage a factory's engineers and the machines
     6. **$ dotnet restore**<br>
 
 - **Database Schema**
+
 | engineers   | machines     | engineermachine   |
 | ----------- | ------------ | ----------------- |
 | EngineerId  | MachineId    | EngineerMachineId |
