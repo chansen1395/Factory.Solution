@@ -1,0 +1,51 @@
+@{
+  Layout = "_Layout";
+}
+
+@using System;
+
+@model Factory.Models.Engineer
+
+<h2>Engineer Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+@* <h3>@Html.DisplayNameFor(model => model.EnrollmentDate): @Model.EnrollmentDate.ToString("d") *@
+</h3>
+
+@if(@Model.JoinEntities.Count == 0)
+{
+  <p>This engineer is not enrolled in any machines</p>
+}
+else
+{
+  <h4>Machines the engineer is enrolled in:</h4>
+  <ul>
+  @foreach(var join in Model.JoinEntities)
+  {
+    <li>@join.Machine.Name</li>
+    @using (Html.BeginForm("DeleteMachine", "Engineers"))
+    {
+      @Html.Hidden("joinId", @join.EngineerMachineId)
+      <input type="submit" value="Delete"/>
+    }
+  }
+  </ul>
+  @* <h4>Engineer's Major:</h4>
+  <ul>
+  @foreach(var join in Model.JoinEntities2)
+  {
+    <li>@join.Department.Name</li>
+    @using (Html.BeginForm("DeleteDepartment", "Engineers"))
+    {
+      @Html.Hidden("joinId", @join.DepartmentEngineerId)
+      <input type="submit" value="Delete"/>
+    }
+  }
+  </ul> *@
+}
+
+<p>@Html.ActionLink("Add a Machine", "AddMachine", new { id = Model.EngineerId })</p>
+
+<p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Edit Engineer", "Edit", new { id = Model.EngineerId })</p>
+<p>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId })</p>
