@@ -66,6 +66,13 @@ _This is an MVC web application to manage a factory's engineers and the machines
     ```
     6. **$ dotnet restore**<br>
 
+- **Database Schema**
+| engineers   | machines     | engineermachine   |
+| :---        | :----        | :----             |
+| EngineerId  | MachineId    | EngineerMachineId |
+| Name        | Name         | MachineId         |
+| RepairMade  | SerialNumber | EngineerId        |
+|             | Operational  |                   |
 - _In order to run the program, follow along with the previous steps. After step 4, navigate to the Factory directory:_
 ```
     1. $ cd ..Factory
