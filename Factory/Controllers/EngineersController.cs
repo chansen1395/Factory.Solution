@@ -59,7 +59,6 @@ namespace Factory.Controllers
     [HttpPost]
     public ActionResult Edit(Engineer engineer, int MachineId)
     {
-      // if 
       if (MachineId != 0)
       {
         _db.EngineerMachine.Add(new EngineerMachine() { MachineId = MachineId, EngineerId = engineer.EngineerId });

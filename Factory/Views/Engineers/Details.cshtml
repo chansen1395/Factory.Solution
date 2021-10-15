@@ -27,6 +27,14 @@ else
     {
       @Html.Hidden("joinId", @join.EngineerMachineId)
       <input type="submit" value="Delete"/>
+      if (@Model.RepairMade == null)
+      {
+        <h3>@Model.Name has not made any repairs yet!</h3>
+      }
+      else
+      {
+        <p>Last Repaired a machine on: @Model.RepairMade.ToString("d")</p>
+      }
     }
   }
   </ul>
