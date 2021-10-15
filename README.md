@@ -68,7 +68,7 @@ _This is an MVC web application to manage a factory's engineers and the machines
 
 - **Database Schema**
 | engineers   | machines     | engineermachine   |
-| :---        | :----        | :----             |
+| :---------- | :----------- | :---------------- |
 | EngineerId  | MachineId    | EngineerMachineId |
 | Name        | Name         | MachineId         |
 | RepairMade  | SerialNumber | EngineerId        |
